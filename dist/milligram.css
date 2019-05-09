@@ -1,8 +1,8 @@
 /*!
  * Milligram v1.3.0
- * https://milligram.github.io
+ * https://milligram.io
  *
- * Copyright (c) 2018 CJ Patoilo
+ * Copyright (c) 2019 CJ Patoilo
  * Licensed under the MIT license
  */
 
@@ -24,17 +24,6 @@ body {
   font-weight: 300;
   letter-spacing: .01em;
   line-height: 1.6;
-}
-
-blockquote {
-  border-left: 0.3rem solid #d1d1d1;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 1rem 1.5rem;
-}
-
-blockquote *:last-child {
-  margin-bottom: 0;
 }
 
 .button,
@@ -167,28 +156,6 @@ input[type='reset'].button-clear[disabled]:hover,
 input[type='submit'].button-clear[disabled]:focus,
 input[type='submit'].button-clear[disabled]:hover {
   color: #9b4dca;
-}
-
-code {
-  background: #f4f5f6;
-  border-radius: .4rem;
-  font-size: 86%;
-  margin: 0 .2rem;
-  padding: .2rem .5rem;
-  white-space: nowrap;
-}
-
-pre {
-  background: #f4f5f6;
-  border-left: 0.3rem solid #9b4dca;
-  overflow-y: hidden;
-}
-
-pre > code {
-  border-radius: 0;
-  display: block;
-  padding: 1rem 1.5rem;
-  white-space: pre;
 }
 
 hr {
@@ -442,7 +409,15 @@ input[type='radio'] {
       align-self: center;
 }
 
-@media (min-width: 40rem) {
+.row .column-responsive {
+  display: block;
+  flex: 1 1 auto;
+  margin-left: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
   .row {
     flex-direction: row;
     margin-left: -1.0rem;
@@ -451,6 +426,54 @@ input[type='radio'] {
   .row .column {
     margin-bottom: inherit;
     padding: 0 1.0rem;
+  }
+  .row .column-responsive {
+    margin-bottom: inherit;
+    padding: 0 1.0rem;
+  }
+  .row .column-responsive.column-10 {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  .row .column-responsive.column-20 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .row .column-responsive.column-25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .row .column-responsive.column-33, .row .column-responsive.column-34 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  .row .column-responsive.column-40 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .row .column-responsive.column-50 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .row .column-responsive.column-60 {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  .row .column-responsive.column-66, .row .column-responsive.column-67 {
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+  }
+  .row .column-responsive.column-75 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .row .column-responsive.column-80 {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  .row .column-responsive.column-90 {
+    flex: 0 0 90%;
+    max-width: 90%;
   }
 }
 
@@ -461,35 +484,6 @@ a {
 
 a:focus, a:hover {
   color: #606c76;
-}
-
-dl,
-ol,
-ul {
-  list-style: none;
-  margin-top: 0;
-  padding-left: 0;
-}
-
-dl dl,
-dl ol,
-dl ul,
-ol dl,
-ol ol,
-ol ul,
-ul dl,
-ul ol,
-ul ul {
-  font-size: 90%;
-  margin: 1.5rem 0 1.5rem 3.0rem;
-}
-
-ol {
-  list-style: decimal inside;
-}
-
-ul {
-  list-style: circle inside;
 }
 
 .button,
@@ -539,6 +533,52 @@ th:first-child {
 td:last-child,
 th:last-child {
   padding-right: 0;
+}
+
+@media screen and (max-width: 640px) {
+  table {
+    border-spacing: 0;
+    display: flex;
+    width: 100%;
+  }
+  table thead {
+    border-right: solid 0.1rem #e1e1e1;
+  }
+  table thead td,
+  table thead th {
+    padding-left: 0;
+  }
+  table thead td:first-child,
+  table thead th:first-child {
+    padding-left: 0;
+  }
+  table thead td:last-child,
+  table thead th:last-child {
+    padding-right: 1.2rem;
+  }
+  table tbody {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  table tbody tr {
+    border-right: solid 0.1rem #e1e1e1;
+  }
+  table tbody tr:last-child {
+    border-right: none;
+  }
+  table td,
+  table th {
+    display: block;
+  }
+  table td:first-child,
+  table th:first-child {
+    padding-left: 1.2rem;
+  }
+  table td:last-child,
+  table th:last-child {
+    padding-right: 1.2rem;
+  }
 }
 
 b,
@@ -593,10 +633,6 @@ h6 {
   font-size: 1.6rem;
   letter-spacing: 0;
   line-height: 1.4;
-}
-
-img {
-  max-width: 100%;
 }
 
 .clearfix:after {

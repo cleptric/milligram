@@ -209,7 +209,7 @@ input[type='datetime-local']:focus,
 input:not([type]):focus,
 textarea:focus,
 select:focus {
-  border-color: #d33c47;
+  border-color: #606c76;
   outline: 0;
 }
 
